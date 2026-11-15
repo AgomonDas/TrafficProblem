@@ -1,0 +1,222 @@
+=== time step 0 (ticks 0..9) ===
+request (n=4, v1, v7, truck)
+   4 x v1->v2->v3->v7  dist=38 time=26
+request (n=3, v5, v8, truck)
+   3 x v5->v1->v2->v3->v4->v8  dist=47 time=33
+request (n=2, v5, v3, truck)
+   2 x v5->v1->v2->v3  dist=34 time=24
+request (n=1, v8, v7, truck)
+   1 x v8->v4->v3->v7  dist=19 time=13
+request (n=6, v5, v3, bus)
+   6 x v5->v11->v16->v4->v3  dist=20 time=11
+request (n=4, v1, v4, bus)
+   4 x v1->v5->v11->v16->v4  dist=15 time=8
+request (n=3, v14, v1, bus)
+   3 x v14->v7->v3->v4->v16->v11->v5->v1  dist=37 time=20
+request (n=2, v10, v4, bus)
+   2 x v10->v11->v16->v4  dist=13 time=7
+request (n=1, v3, v4, bus)
+   1 x v3->v4  dist=7 time=4
+request (n=6, v12, v6, cng)
+   6 x v12->v6  dist=5 time=2
+request (n=5, v5, v15, cng)
+   5 x v5->v11->v16->v4->v6->v25->v15  dist=24 time=11
+request (n=3, v4, v13, cng)
+   3 x v4->v8->v29->v13  dist=14 time=5
+request (n=3, v5, v12, cng)
+   3 x v5->v11->v16->v4->v6->v12  dist=22 time=10
+request (n=1, v16, v13, cng)
+   1 x v16->v11->v5->v13  dist=11 time=5
+road loads (peak PCU in window, top 15 by utilisation):
+   e36 (v11,v5) bus-road dist=5  load 56/28 = 200%
+   e15 (v16,v11) bus-road dist=4  load 48/28 = 171%
+   e1 (v2,v1) truck-road dist=19  load 54/48 = 112%
+   e4 (v5,v1) truck-road dist=2  load 46/48 = 96%
+   e3 (v4,v3) truck-road dist=7  load 42/48 = 88%
+   e47 (v4,v16) truck-road dist=4  load 48/96 = 50%
+   e13 (v14,v7) bus-road dist=9  load 12/28 = 43%
+   e48 (v6,v12) bus-road dist=5  load 12/28 = 43%
+   e28 (v29,v8) cng-road dist=2  load 6/16 = 38%
+   e58 (v29,v13) cng-road dist=6  load 6/16 = 38%
+   e32 (v4,v6) truck-road dist=4  load 16/48 = 33%
+   e50 (v10,v11) bus-road dist=5  load 8/28 = 29%
+   e61 (v6,v25) bus-road dist=4  load 10/56 = 18%
+   e6 (v7,v3) truck-road dist=6  load 12/96 = 12%
+   e7 (v8,v4) truck-road dist=6  load 12/96 = 12%
+=== time step 1 (ticks 10..19) ===
+request (n=5, v10, v7, bus)
+   5 x v10->v11->v16->v4->v3->v7  dist=26 time=14
+request (n=5, v11, v6, bus)
+   5 x v11->v16->v4->v6  dist=12 time=6
+request (n=6, v21, v2, cng)
+   6 x v21->v19->v14->v7->v3->v2  dist=35 time=13
+request (n=6, v20, v16, cng)
+   6 x v20->v25->v6->v4->v16  dist=15 time=7
+request (n=5, v11, v15, cng)
+   5 x v11->v16->v4->v6->v25->v15  dist=19 time=9
+request (n=4, v1, v21, cng)
+   4 x v1->v5->v11->v16->v4->v28->v27->v19->v21  dist=37 time=16
+request (n=2, v7, v8, cng)
+   2 x v7->v3->v4->v8  dist=19 time=7
+request (n=6, v18, v24, cycle)
+   6 x v18->v7->v3->v12->v15->v24  dist=22 time=22
+request (n=5, v2, v20, cycle)
+   5 x v2->v24->v15->v20  dist=8 time=8
+road loads (peak PCU in window, top 15 by utilisation):
+   e15 (v16,v11) bus-road dist=4  load 40/28 = 143%
+   e2 (v3,v2) truck-road dist=13  load 66/48 = 138%
+   e1 (v2,v1) truck-road dist=19  load 54/48 = 112%
+   e32 (v4,v6) truck-road dist=4  load 42/48 = 88%
+   e3 (v4,v3) truck-road dist=7  load 36/48 = 75%
+   e50 (v10,v11) bus-road dist=5  load 20/28 = 71%
+   e62 (v15,v25) cng-road dist=3  load 10/16 = 62%
+   e43 (v27,v28) cng-road dist=9  load 8/16 = 50%
+   e47 (v4,v16) truck-road dist=4  load 42/96 = 44%
+   e13 (v14,v7) bus-road dist=9  load 12/28 = 43%
+   e36 (v11,v5) bus-road dist=5  load 12/28 = 43%
+   e33 (v7,v18) cng-road dist=4  load 6/16 = 38%
+   e65 (v24,v15) cycle-road dist=5  load 5/16 = 31%
+   e4 (v5,v1) truck-road dist=2  load 12/48 = 25%
+   e54 (v20,v25) truck-road dist=3  load 12/48 = 25%
+=== time step 2 (ticks 20..29) ===
+request (n=6, v5, v4, truck)
+   6 x v5->v1->v2->v3->v4  dist=41 time=29
+request (n=6, v4, v16, bus)
+   6 x v4->v16  dist=4 time=2
+request (n=1, v9, v13, bus)
+   1 x v9->v6->v4->v16->v11->v5->v13  dist=23 time=12
+request (n=5, v18, v21, cng)
+   5 x v18->v7->v14->v19->v21  dist=20 time=8
+request (n=4, v22, v1, cng)
+   4 x v22->v7->v3->v4->v16->v11->v5->v1  dist=29 time=13
+request (n=1, v8, v24, cng)
+   1 x v8->v4->v6->v25->v20->v26->v24  dist=25 time=11
+request (n=1, v18, v23, cng)
+   1 x v18->v7->v3->v12->v23  dist=15 time=7
+road loads (peak PCU in window, top 15 by utilisation):
+   e2 (v3,v2) truck-road dist=13  load 66/48 = 138%
+   e33 (v7,v18) cng-road dist=4  load 12/16 = 75%
+   e1 (v2,v1) truck-road dist=19  load 36/48 = 75%
+   e4 (v5,v1) truck-road dist=2  load 36/48 = 75%
+   e6 (v7,v3) truck-road dist=6  load 54/96 = 56%
+   e3 (v4,v3) truck-road dist=7  load 26/48 = 54%
+   e21 (v22,v7) cng-road dist=1  load 8/16 = 50%
+   e43 (v27,v28) cng-road dist=9  load 8/16 = 50%
+   e57 (v27,v19) cng-road dist=4  load 8/16 = 50%
+   e65 (v24,v15) cycle-road dist=5  load 6/16 = 38%
+   e13 (v14,v7) bus-road dist=9  load 10/28 = 36%
+   e15 (v16,v11) bus-road dist=4  load 8/28 = 29%
+   e47 (v4,v16) truck-road dist=4  load 24/96 = 25%
+   e7 (v8,v4) truck-road dist=6  load 18/96 = 19%
+   e18 (v19,v14) bus-road dist=3  load 10/56 = 18%
+=== time step 3 (ticks 30..39) ===
+request (n=6, v8, v4, bus)
+   6 x v8->v4  dist=6 time=3
+request (n=3, v13, v15, bus)
+   3 x v13->v5->v11->v16->v4->v6->v12->v15  dist=27 time=15
+request (n=3, v3, v8, bus)
+   3 x v3->v4->v8  dist=13 time=7
+request (n=2, v13, v5, bus)
+   2 x v13->v5  dist=2 time=1
+request (n=1, v13, v5, bus)
+   1 x v13->v5  dist=2 time=1
+request (n=6, v14, v7, cng)
+   6 x v14->v7  dist=9 time=3
+request (n=5, v10, v13, cng)
+   5 x v10->v13  dist=2 time=1
+request (n=2, v7, v6, cng)
+   2 x v7->v3->v6  dist=9 time=3
+request (n=2, v22, v13, cng)
+   2 x v22->v7->v3->v4->v8->v29->v13  dist=28 time=11
+request (n=3, v27, v16, cycle)
+   3 x v27->v19->v16  dist=11 time=11
+request (n=3, v14, v13, cycle)
+   3 x v14->v19->v16->v11->v5->v13  dist=21 time=21
+request (n=2, v7, v16, cycle)
+   2 x v7->v21->v19->v16  dist=16 time=16
+request (n=1, v7, v18, cycle)
+   1 x v7->v18  dist=4 time=4
+road loads (peak PCU in window, top 15 by utilisation):
+   e12 (v13,v5) bus-road dist=2  load 24/28 = 86%
+   e1 (v2,v1) truck-road dist=19  load 36/48 = 75%
+   e2 (v3,v2) truck-road dist=13  load 36/48 = 75%
+   e36 (v11,v5) bus-road dist=5  load 20/28 = 71%
+   e51 (v13,v10) cng-road dist=2  load 10/16 = 62%
+   e53 (v19,v16) cycle-road dist=7  load 8/16 = 50%
+   e7 (v8,v4) truck-road dist=6  load 42/96 = 44%
+   e13 (v14,v7) bus-road dist=9  load 12/28 = 43%
+   e15 (v16,v11) bus-road dist=4  load 12/28 = 43%
+   e65 (v24,v15) cycle-road dist=5  load 6/16 = 38%
+   e3 (v4,v3) truck-road dist=7  load 16/48 = 33%
+   e63 (v21,v7) cycle-road dist=5  load 2/8 = 25%
+   e21 (v22,v7) cng-road dist=1  load 4/16 = 25%
+   e28 (v29,v8) cng-road dist=2  load 4/16 = 25%
+   e58 (v29,v13) cng-road dist=6  load 4/16 = 25%
+=== time step 4 (ticks 40..49) ===
+request (n=5, v5, v7, bus)
+   5 x v5->v11->v16->v4->v3->v7  dist=26 time=14
+request (n=3, v1, v13, bus)
+   3 x v1->v13  dist=4 time=2
+request (n=1, v11, v1, bus)
+   1 x v11->v5->v1  dist=7 time=4
+request (n=3, v19, v18, cng)
+   3 x v19->v14->v7->v18  dist=16 time=6
+request (n=1, v12, v14, cng)
+   1 x v12->v3->v7->v14  dist=19 time=7
+request (n=6, v29, v23, cycle)
+   6 x v29->v8->v4->v6->v25->v23  dist=18 time=18
+request (n=5, v19, v1, cycle)
+   5 x v19->v16->v11->v5->v1  dist=18 time=18
+road loads (peak PCU in window, top 15 by utilisation):
+   e3 (v4,v3) truck-road dist=7  load 56/48 = 117%
+   e36 (v11,v5) bus-road dist=5  load 24/28 = 86%
+   e15 (v16,v11) bus-road dist=4  load 23/28 = 82%
+   e2 (v3,v2) truck-road dist=13  load 36/48 = 75%
+   e53 (v19,v16) cycle-road dist=7  load 10/16 = 62%
+   e48 (v6,v12) bus-road dist=5  load 12/28 = 43%
+   e28 (v29,v8) cng-road dist=2  load 6/16 = 38%
+   e33 (v7,v18) cng-road dist=4  load 6/16 = 38%
+   e58 (v29,v13) cng-road dist=6  load 4/16 = 25%
+   e13 (v14,v7) bus-road dist=9  load 6/28 = 21%
+   e14 (v15,v12) bus-road dist=3  load 12/56 = 21%
+   e37 (v13,v1) bus-road dist=4  load 12/56 = 21%
+   e47 (v4,v16) truck-road dist=4  load 20/96 = 21%
+   e32 (v4,v6) truck-road dist=4  load 6/48 = 12%
+   e12 (v13,v5) bus-road dist=2  load 3/28 = 11%
+=== time step 5 (ticks 50..59) ===
+request (n=6, v7, v9, truck)
+   6 x v7->v3->v6->v9  dist=13 time=9
+request (n=5, v1, v6, truck)
+   5 x v1->v2->v3->v6  dist=35 time=24
+request (n=6, v14, v8, bus)
+   6 x v14->v7->v3->v4->v8  dist=28 time=15
+request (n=6, v15, v9, bus)
+   6 x v15->v12->v6->v9  dist=12 time=7
+request (n=5, v16, v7, bus)
+   5 x v16->v4->v3->v7  dist=17 time=9
+request (n=1, v9, v2, bus)
+   1 x v9->v6->v3->v2  dist=20 time=11
+request (n=6, v15, v5, cng)
+   6 x v15->v25->v6->v4->v16->v11->v5  dist=24 time=11
+request (n=3, v12, v17, cng)
+   3 x v12->v3->v7->v17  dist=11 time=5
+request (n=1, v22, v18, cng)
+   1 x v22->v18  dist=4 time=2
+request (n=5, v22, v19, cycle)
+   5 x v22->v7->v21->v19  dist=10 time=10
+road loads (peak PCU in window, top 15 by utilisation):
+   e8 (v9,v6) truck-road dist=4  load 60/48 = 125%
+   e13 (v14,v7) bus-road dist=9  load 24/28 = 86%
+   e48 (v6,v12) bus-road dist=5  load 24/28 = 86%
+   e62 (v15,v25) cng-road dist=3  load 12/16 = 75%
+   e5 (v6,v3) truck-road dist=3  load 36/48 = 75%
+   e6 (v7,v3) truck-road dist=6  load 62/96 = 65%
+   e63 (v21,v7) cycle-road dist=5  load 5/8 = 62%
+   e1 (v2,v1) truck-road dist=19  load 30/48 = 62%
+   e3 (v4,v3) truck-road dist=7  load 24/48 = 50%
+   e15 (v16,v11) bus-road dist=4  load 12/28 = 43%
+   e36 (v11,v5) bus-road dist=5  load 12/28 = 43%
+   e14 (v15,v12) bus-road dist=3  load 24/56 = 43%
+   e61 (v6,v25) bus-road dist=4  load 18/56 = 32%
+   e21 (v22,v7) cng-road dist=1  load 5/16 = 31%
+   e32 (v4,v6) truck-road dist=4  load 12/48 = 25%

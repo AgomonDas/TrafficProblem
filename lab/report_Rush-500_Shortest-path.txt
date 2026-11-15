@@ -1,0 +1,112 @@
+=== time step 0 (ticks 0..9) ===
+request (n=2, v68, v85, truck)
+   2 x v68->v7->v4->v2->v5->v30->v33->v85  dist=107 time=73
+request (n=10, v68, v52, bus)
+   10 x v68->v7->v23->v94->v129->v189->v232->v120->v77->v333->v339->v323->v161->v51->v37->v35->v52  dist=105 time=56
+request (n=6, v119, v66, bus)
+   6 x v119->v46->v102->v465->v127->v205->v479->v4->v2->v12->v54->v66  dist=116 time=62
+request (n=6, v38, v171, bus)
+   6 x v38->v1->v3->v13->v24->v171  dist=57 time=29
+request (n=5, v201, v212, bus)
+   5 x v201->v326->v245->v237->v7->v4->v14->v130->v177->v244->v212  dist=63 time=34
+request (n=3, v70, v85, bus)
+   3 x v70->v54->v12->v2->v269->v133->v44->v268->v85  dist=38 time=22
+request (n=10, v70, v119, cng)
+   10 x v70->v54->v66->v117->v358->v170->v166->v186->v345->v126->v278->v72->v86->v423->v23->v95->v102->v46->v119  dist=77 time=30
+request (n=7, v68, v119, cng)
+   7 x v68->v7->v127->v465->v432->v46->v119  dist=33 time=14
+request (n=6, v68, v52, cng)
+   6 x v68->v7->v127->v465->v102->v82->v20->v19->v57->v91->v222->v60->v52  dist=61 time=24
+request (n=5, v68, v85, cng)
+   5 x v68->v267->v481->v64->v229->v225->v259->v294->v290->v85  dist=36 time=15
+request (n=4, v68, v119, cng)
+   4 x v68->v7->v127->v465->v432->v46->v119  dist=33 time=14
+request (n=9, v497, v402, cycle)
+   9 x v497->v130->v14->v36->v304->v486->v84->v429->v81->v7->v237->v326->v355->v72->v50->v277->v124->v441->v385->v167->v402  dist=98 time=98
+request (n=6, v68, v119, cycle)
+   6 x v68->v7->v127->v465->v432->v46->v119  dist=33 time=33
+request (n=6, v70, v85, cycle)
+   6 x v70->v354->v83->v2->v269->v133->v44->v268->v85  dist=28 time=28
+road loads (peak PCU in window, top 8 by utilisation):
+   e464 (v465,v432) cng-road dist=3  load 22/16 = 138%
+   e357 (v358,v170) cng-road dist=3  load 20/16 = 125%
+   e569 (v117,v358) cng-road dist=5  load 20/16 = 125%
+   e575 (v127,v465) truck-road dist=5  load 58/48 = 121%
+   e67 (v68,v7) truck-road dist=10  load 92/96 = 96%
+   e528 (v46,v102) bus-road dist=3  load 24/28 = 86%
+   e22 (v23,v7) truck-road dist=12  load 40/48 = 83%
+   e236 (v237,v7) bus-road dist=3  load 20/28 = 71%
+=== time step 1 (ticks 10..19) ===
+request (n=4, v70, v85, bus)
+   4 x v70->v54->v12->v2->v269->v133->v44->v268->v85  dist=38 time=22
+request (n=10, v70, v52, cng)
+   10 x v70->v54->v66->v117->v358->v170->v166->v186->v345->v126->v278->v72->v86->v423->v23->v95->v102->v82->v20->v19->v57->v91->v222->v60->v52  dist=104 time=40
+request (n=9, v119, v85, cng)
+   9 x v119->v46->v102->v95->v23->v423->v86->v72->v278->v126->v204->v241->v474->v483->v388->v85  dist=63 time=25
+request (n=8, v70, v85, cng)
+   8 x v70->v354->v83->v2->v269->v133->v44->v268->v85  dist=28 time=11
+request (n=7, v68, v85, cng)
+   7 x v68->v267->v481->v64->v229->v225->v259->v294->v290->v85  dist=36 time=15
+request (n=7, v101, v247, cng)
+   7 x v101->v253->v91->v57->v19->v20->v82->v102->v95->v23->v423->v86->v72->v278->v126->v204->v241->v436->v132->v79->v133->v30->v96->v247  dist=112 time=43
+request (n=4, v119, v85, cng)
+   4 x v119->v46->v102->v95->v23->v423->v86->v72->v278->v126->v204->v241->v474->v483->v388->v85  dist=63 time=25
+request (n=3, v347, v387, cng)
+   3 x v347->v155->v50->v72->v278->v126->v204->v344->v387  dist=37 time=16
+request (n=2, v394, v264, cng)
+   2 x v394->v261->v58->v287->v268->v44->v79->v132->v170->v166->v55->v264  dist=38 time=17
+request (n=2, v68, v85, cycle)
+   2 x v68->v267->v481->v64->v229->v225->v259->v294->v290->v85  dist=36 time=36
+road loads (peak PCU in window, top 8 by utilisation):
+   e840 (v72,v278) cng-road dist=6  load 26/16 = 162%
+   e188 (v189,v129) bus-road dist=6  load 40/28 = 143%
+   e277 (v278,v126) cng-road dist=5  load 20/16 = 125%
+   e344 (v345,v186) cng-road dist=3  load 20/16 = 125%
+   e357 (v358,v170) cng-road dist=3  load 20/16 = 125%
+   e569 (v117,v358) cng-road dist=5  load 20/16 = 125%
+   e574 (v126,v345) cng-road dist=6  load 20/16 = 125%
+   e268 (v269,v133) bus-road dist=3  load 34/28 = 121%
+=== time step 2 (ticks 20..29) ===
+request (n=3, v68, v85, truck)
+   3 x v68->v7->v4->v2->v5->v30->v33->v85  dist=107 time=73
+request (n=10, v68, v119, bus)
+   10 x v68->v7->v127->v465->v102->v46->v119  dist=34 time=19
+request (n=8, v98, v43, bus)
+   8 x v98->v20->v82->v102->v465->v127->v205->v479->v4->v14->v43  dist=60 time=33
+request (n=4, v158, v123, bus)
+   4 x v158->v138->v104->v211->v49->v31->v8->v10->v15->v42->v285->v231->v123  dist=82 time=45
+request (n=3, v70, v85, bus)
+   3 x v70->v54->v12->v2->v269->v133->v44->v268->v85  dist=38 time=22
+request (n=2, v86, v100, bus)
+   2 x v86->v72->v201->v326->v245->v237->v7->v81->v151->v418->v76->v8->v31->v87->v100  dist=78 time=43
+request (n=1, v119, v85, bus)
+   1 x v119->v46->v102->v465->v127->v205->v479->v4->v8->v10->v210->v225->v259->v294->v290->v33->v85  dist=91 time=51
+request (n=1, v229, v209, bus)
+   1 x v229->v179->v10->v209  dist=11 time=7
+request (n=9, v70, v85, cng)
+   9 x v70->v354->v83->v2->v269->v133->v44->v268->v85  dist=28 time=11
+request (n=8, v378, v377, cng)
+   8 x v378->v67->v276->v313->v332->v462->v430->v463->v189->v129->v94->v23->v7->v4->v486->v78->v36->v377  dist=92 time=35
+request (n=7, v70, v85, cng)
+   7 x v70->v354->v83->v2->v269->v133->v44->v268->v85  dist=28 time=11
+request (n=7, v68, v119, cng)
+   7 x v68->v7->v127->v465->v432->v46->v119  dist=33 time=14
+request (n=1, v344, v288, cng)
+   1 x v344->v204->v126->v278->v72->v86->v423->v23->v95->v102->v82->v20->v19->v57->v91->v222->v60->v52->v35->v11->v288  dist=93 time=36
+request (n=1, v119, v52, cng)
+   1 x v119->v92->v20->v19->v57->v91->v222->v60->v52  dist=34 time=13
+request (n=7, v68, v119, cycle)
+   7 x v68->v7->v127->v465->v432->v46->v119  dist=33 time=33
+request (n=2, v68, v85, cycle)
+   2 x v68->v267->v481->v64->v229->v225->v259->v294->v290->v85  dist=36 time=36
+request (n=2, v70, v119, cycle)
+   2 x v70->v54->v366->v480->v149->v401->v264->v55->v126->v278->v72->v86->v423->v23->v95->v102->v46->v119  dist=75 time=75
+road loads (peak PCU in window, top 8 by utilisation):
+   e277 (v278,v126) cng-road dist=5  load 48/16 = 300%
+   e353 (v354,v83) cng-road dist=5  load 32/16 = 200%
+   e268 (v269,v133) bus-road dist=3  load 48/28 = 171%
+   e840 (v72,v278) cng-road dist=6  load 26/16 = 162%
+   e912 (v241,v474) cng-road dist=3  load 26/16 = 162%
+   e188 (v189,v129) bus-road dist=6  load 40/28 = 143%
+   e231 (v232,v189) bus-road dist=4  load 40/28 = 143%
+   e344 (v345,v186) cng-road dist=3  load 20/16 = 125%

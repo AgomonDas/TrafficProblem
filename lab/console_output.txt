@@ -1,0 +1,65 @@
+################ DEMO: the 4-vertex example from the problem statement ################
+=== time step 0 (ticks 0..9) ===
+request (n=2, v1, v4, cng)
+   1 x v1->v2->v3->v4  dist=13 time=13
+   1 x v1->v3->v4  dist=8 time=8
+road loads (peak PCU in window, top 10 by utilisation):
+   e2 (v1,v3) cng-road dist=3  load 2/2 = 100%
+   e4 (v3,v4) truck-road dist=5  load 2/2 = 100%
+   e1 (v1,v2) cng-road dist=3  load 2/4 = 50%
+   e3 (v2,v3) bus-road dist=5  load 2/8 = 25%
+=== time step 1 (ticks 10..19) ===
+request (n=1, v1, v4, truck)
+   no valid path for this vehicle type -> 1 rejected
+request (n=1, v2, v4, cng)
+   1 x v2->v3->v4  dist=10 time=10
+road loads (peak PCU in window, top 10 by utilisation):
+   e4 (v3,v4) truck-road dist=5  load 2/2 = 100%
+   e3 (v2,v3) bus-road dist=5  load 2/8 = 25%
+edge occupancy intervals [start,end) in ticks:
+   e1: [0,3) +2 PCU
+   e3: [3,8) +2 PCU
+   e4: [8,13) +2 PCU
+   e2: [0,3) +2 PCU
+   e4: [3,8) +2 PCU
+   e3: [10,15) +2 PCU
+   e4: [15,20) +2 PCU
+
+################ BENCHMARK (same instances for all algorithms) ################
+Instance    Algo          MaxLoad  AvgLoad  VarLoad  AvgUtil    Used MaxUtil  VarUtil  Overload   TotDist   TotTime Rejected  Time(ms)
+[Small-30: |V|=30 |E|=65 steps=6 vehicles=219]
+Small-30    Shortest-path      66     4.04   106.86     9.5%   66.2%  200.0%   0.0592         9      4140      2448        0       0.1
+Small-30    Greedy-LB          48     4.17    60.73    10.7%   92.3%  100.0%   0.0271         0      5411      3186        0       0.8
+Small-30    Proposed           58     3.88    68.54     9.9%   87.7%  100.0%   0.0343         0      4319      2542        0       0.6
+[Medium-200: |V|=200 |E|=475 steps=10 vehicles=695]
+Medium-200  Shortest-path     114     1.48    38.47     3.6%   59.8%  237.5%   0.0228        36     30839     18218        0       2.1
+Medium-200  Greedy-LB          68     1.95    20.93     4.7%   90.5%  100.0%   0.0083         0     55906     33139        0      22.2
+Medium-200  Proposed           70     1.51    20.71     3.7%   79.2%  100.0%   0.0104         0     33712     20012        0      14.0
+[Large-800: |V|=800 |E|=1860 steps=10 vehicles=1483]
+Large-800   Shortest-path     554     1.04    68.85     2.2%   52.7% 1154.2%   0.0294       224    147768     85747        0      19.0
+Large-800   Greedy-LB          80     1.13    12.63     2.8%   84.0%  100.0%   0.0053         0    213581    120162      133     170.1
+Large-800   Proposed           96     0.88    12.00     2.2%   72.0%  100.0%   0.0056         0    139942     79310      133     131.7
+[Rush-500: |V|=500 |E|=1174 steps=12 vehicles=2483]
+Rush-500    Shortest-path     708     2.77   293.55     4.3%   44.5% 1475.0%   0.1440       721    190563    110277        0      14.3
+Rush-500    Greedy-LB          96     2.28    41.56     6.0%   84.1%  100.0%   0.0210         0    247214    136182      204     188.7
+Rush-500    Proposed           96     1.94    34.28     5.0%   74.5%  100.0%   0.0179         0    191930    107796      188     193.7
+
+################ TRADE-OFF: sweep of alpha (Medium-200) ################
+alpha     MaxUtil  AvgUtil  VarUtil   TotDist  Dist/veh  Rejected       ms
+0.0        100.0%     5.2%   0.0261     32055     46.12         0      8.9
+0.5        100.0%     5.1%   0.0206     32104     46.19         0     12.1
+1.0        100.0%     4.8%   0.0176     32260     46.42         0     12.5
+2.0        100.0%     4.8%   0.0156     32678     47.02         0     13.2
+4.0        100.0%     4.8%   0.0133     33712     48.51         0     14.9
+8.0        100.0%     4.7%   0.0111     35054     50.44         0     16.1
+16.0       100.0%     3.6%   0.0075     36579     52.63         0     15.7
+32.0       100.0%     3.6%   0.0068     38021     54.71         0     16.4
+
+################ SCALABILITY (T=5 steps) ################
+|V|    |E|     vehicles     SP(ms)   GLB(ms)  Prop(ms)
+50     120     102             0.1       0.7       0.4
+100    240     158             0.3       2.3       1.6   exponent~1.87
+200    480     281             0.8       6.5       4.5   exponent~1.48
+400    940     704             3.5      32.4      26.8   exponent~2.57
+800    1879    1443           16.6     173.9     139.6   exponent~2.38
+1600   3772    3087           77.3     704.4     644.0   exponent~2.21
